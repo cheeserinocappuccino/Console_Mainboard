@@ -1,0 +1,15 @@
+﻿"Symbol";"Value";"Unit";
+"SUPPLIER_NAME";"RS Components";"";
+"TraceParts.PartVersion";"1.0.6";"";
+"SUPPLIER";"KEMET";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartNumber";"10-07092016-111396";"";
+"TraceParts.PartLanguage";"zh";"";
+"DESIGN";"KEMET 多层陶瓷电容器 (MLCC), C 系列, 100nF, 16V 直流, 表面安装器件, ±10%容差, 0805 (2012M)封装";"";
+"TraceParts.InstanceId";"10-07092016-111396CW7JXNO6Y416HHNJDA2BTDOLQ";"";
+"TraceParts.PartTitle";"KEMET 多层陶瓷电容器 (MLCC), C 系列, 100nF, 16V 直流, 表面安装器件, ±10%容差, 0805 (2012M)封装";"";
+"REFERENCE";"C0805C104K4RACTU";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStatusId";"";"";
+"rs_stock_number";"6480957";"";
+"TraceParts.ClassPath";"RS_COMPONENTS:10-07092016-111396";"";

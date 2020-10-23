@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"10-17072017-090138";"";
+"REFERENCE";"C0805C104K3RACTU";"";
+"TraceParts.PartTitle";"0805 X7R ceramic capacitor, 25V 0.1uF";"";
+"TraceParts.InstanceId";"10-17072017-0901382TW5ULNQGUI37SQBOR0YR8C4L";"";
+"DESIGN";"0805 X7R ceramic capacitor, 25V 0.1uF";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartStatusId";"";"";
+"SUPPLIER";"KEMET";"";
+"TraceParts.PartVersion";"1.0.2";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.ClassPath";"KEMET:10-17072017-090138";"";
