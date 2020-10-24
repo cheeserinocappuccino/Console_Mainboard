@@ -106,7 +106,7 @@ GenerateClassCluster=0
 DocumentUniqueId=BBKNDPYM
 
 [Document5]
-DocumentPath=..\TestBoard.PcbDoc
+DocumentPath=..\Testboard.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -120,7 +120,11 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=FNMMJKWQ
+DocumentUniqueId=JLDWYWXV
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Test_board_gotta_be_quick\Move Component(s) Origin To Grid - TestBoard.html
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources

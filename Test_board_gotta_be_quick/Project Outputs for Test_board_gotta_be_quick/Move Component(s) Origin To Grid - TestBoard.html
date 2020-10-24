@@ -1,0 +1,698 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Move Component(s) Origin to Grid</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://Y:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Move Component(s) Origin to Grid</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2020/10/24</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">¤U¤È 11:24:41</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc" class="file"><acronym title="Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc">Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc</acronym></a></td>
+</tr>
+</table><a name="IDOSEUOCT201OACMNZLPQPD0HXDGJRJENNJXIXSMKGF35K2OTXGB"><h2>Components Origin</h2></a><a name="IDUFRU5SIQ4NJVF0UAKXJLSUBZ2H0OBCX4JJR2ISIUPLUEW3UF5V2P"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning"></th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19570.532mil|Location2.X=20259.843mil|Location1.Y=4775.654mil|Location2.Y=5552.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19570.532mil|Location2.X=20259.843mil|Location1.Y=4775.654mil|Location2.Y=5552.575mil|Absolute=True">SIP Component usb1-usb_A_horizontal (501.6mm,133.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16888.052mil|Location2.X=18089.646mil|Location1.Y=4011.992mil|Location2.Y=5515.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16888.052mil|Location2.X=18089.646mil|Location1.Y=4011.992mil|Location2.Y=5515.473mil|Absolute=True">DIP Component T2-Touch_pads2x2 (434.1mm,103.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15608.524mil|Location2.X=16810.118mil|Location1.Y=4011.992mil|Location2.Y=5515.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15608.524mil|Location2.X=16810.118mil|Location1.Y=4011.992mil|Location2.Y=5515.473mil|Absolute=True">DIP Component T1-Touch_pads2x2 (401.6mm,103.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21968.898mil|Location2.X=23157.087mil|Location1.Y=3748.488mil|Location2.Y=5587.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21968.898mil|Location2.X=23157.087mil|Location1.Y=3748.488mil|Location2.Y=5587.622mil|Absolute=True">SIP Component Screen-1.44 Screen (564.1mm,98.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10885.827mil|Location2.X=11385.827mil|Location1.Y=3584.713mil|Location2.Y=4865.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10885.827mil|Location2.X=11385.827mil|Location1.Y=3584.713mil|Location2.Y=4865.898mil|Absolute=True">DIP Component Relay1-LM1H-12D (282.85mm,105.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21736.221mil|Location2.X=21893.701mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21736.221mil|Location2.X=21893.701mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R9-0R_or_360R (554.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21539.371mil|Location2.X=21696.851mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21539.371mil|Location2.X=21696.851mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R8-0R_or_360R (549.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7759.843mil|Location2.X=7917.323mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7759.843mil|Location2.X=7917.323mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R7-360R (199.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7562.992mil|Location2.X=7720.472mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7562.992mil|Location2.X=7720.472mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R6-360R (194.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14354.331mil|Location2.X=14511.811mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14354.331mil|Location2.X=14511.811mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R5-1Kohms (366.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14551.181mil|Location2.X=14708.662mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14551.181mil|Location2.X=14708.662mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R4-47.5k (371.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15043.307mil|Location2.X=15200.788mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15043.307mil|Location2.X=15200.788mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R3-22.1k (384.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20751.969mil|Location2.X=20909.449mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20751.969mil|Location2.X=20909.449mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R2-1000R (529.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20555.119mil|Location2.X=20712.599mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20555.119mil|Location2.X=20712.599mil|Location1.Y=5299.276mil|Location2.Y=5537mil|Absolute=True">SMT Small Component R1-1000R (524.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15267.248mil|Location2.X=15637.402mil|Location1.Y=5146.126mil|Location2.Y=5546.913mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15267.248mil|Location2.X=15637.402mil|Location1.Y=5146.126mil|Location2.Y=5546.913mil|Absolute=True">Small Component M-IRL3713 (394.1mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28606.225mil|Location2.X=28906.135mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28606.225mil|Location2.X=28906.135mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED60-Ws2812B (729.1mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28015.674mil|Location2.X=28315.583mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28015.674mil|Location2.X=28315.583mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED59-Ws2812B (714.1mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27425.123mil|Location2.X=27725.032mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27425.123mil|Location2.X=27725.032mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED58-Ws2812B (699.1mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26932.997mil|Location2.X=27232.906mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26932.997mil|Location2.X=27232.906mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED57-Ws2812B (686.6mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26342.446mil|Location2.X=26642.355mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26342.446mil|Location2.X=26642.355mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED56-Ws2812B (671.6mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25751.894mil|Location2.X=26051.804mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25751.894mil|Location2.X=26051.804mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED55-Ws2812B (656.6mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25161.343mil|Location2.X=25461.253mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25161.343mil|Location2.X=25461.253mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED54-Ws2812B (641.6mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24570.792mil|Location2.X=24870.701mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24570.792mil|Location2.X=24870.701mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED53-Ws2812B (626.6mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23980.241mil|Location2.X=24280.15mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23980.241mil|Location2.X=24280.15mil|Location1.Y=3917.323mil|Location2.Y=4276.788mil|Absolute=True">Component LED52-Ws2812B (611.6mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23456.63mil|Location2.X=23737.031mil|Location1.Y=3948.88mil|Location2.Y=4245.788mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23456.63mil|Location2.X=23737.031mil|Location1.Y=3948.88mil|Location2.Y=4245.788mil|Absolute=True">Component LED51-Ws2812B (599.1mm,102.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12759.768mil|Location2.X=13059.677mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12759.768mil|Location2.X=13059.677mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED50-Ws2812B (326.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12169.217mil|Location2.X=12469.126mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12169.217mil|Location2.X=12469.126mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED49-Ws2812B (311.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11578.665mil|Location2.X=11878.575mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11578.665mil|Location2.X=11878.575mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED48-Ws2812B (296.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10988.114mil|Location2.X=11288.024mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10988.114mil|Location2.X=11288.024mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED47-Ws2812B (281.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10397.563mil|Location2.X=10697.473mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10397.563mil|Location2.X=10697.473mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED46-Ws2812B (266.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9807.012mil|Location2.X=10106.921mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9807.012mil|Location2.X=10106.921mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED45-Ws2812B (251.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9216.461mil|Location2.X=9516.37mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9216.461mil|Location2.X=9516.37mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED44-Ws2812B (236.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8724.335mil|Location2.X=9024.244mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8724.335mil|Location2.X=9024.244mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED43-Ws2812B (224.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7677.091mil|Location2.X=7977mil|Location1.Y=2133.795mil|Location2.Y=2493.26mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7677.091mil|Location2.X=7977mil|Location1.Y=2133.795mil|Location2.Y=2493.26mil|Absolute=True">Component LED42-Ws2812B (197.5mm,57.5mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7429.071mil|Location2.X=7709.471mil|Location1.Y=3326.769mil|Location2.Y=3623.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7429.071mil|Location2.X=7709.471mil|Location1.Y=3326.769mil|Location2.Y=3623.677mil|Absolute=True">Component LED41-Ws2812B (192mm,87mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18468.429mil|Location2.X=18768.339mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18468.429mil|Location2.X=18768.339mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED40-Ws2812B (471.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17877.878mil|Location2.X=18177.788mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17877.878mil|Location2.X=18177.788mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED39-Ws2812B (456.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17287.327mil|Location2.X=17587.237mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17287.327mil|Location2.X=17587.237mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED38-Ws2812B (441.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16795.201mil|Location2.X=17095.111mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16795.201mil|Location2.X=17095.111mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED37-Ws2812B (429.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16204.65mil|Location2.X=16504.559mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16204.65mil|Location2.X=16504.559mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED36-Ws2812B (414.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15614.099mil|Location2.X=15914.008mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15614.099mil|Location2.X=15914.008mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED35-Ws2812B (399.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15023.548mil|Location2.X=15323.457mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15023.548mil|Location2.X=15323.457mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED34-Ws2812B (384.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14432.996mil|Location2.X=14732.906mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14432.996mil|Location2.X=14732.906mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED33-Ws2812B (369.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13842.445mil|Location2.X=14142.355mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13842.445mil|Location2.X=14142.355mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED32-Ws2812B (354.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13318.835mil|Location2.X=13599.235mil|Location1.Y=2590.612mil|Location2.Y=2887.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13318.835mil|Location2.X=13599.235mil|Location1.Y=2590.612mil|Location2.Y=2887.52mil|Absolute=True">Component LED31-Ws2812B (341.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24669.217mil|Location2.X=24969.127mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24669.217mil|Location2.X=24969.127mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED30-Ws2812B (629.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24078.666mil|Location2.X=24378.575mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24078.666mil|Location2.X=24378.575mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED29-Ws2812B (614.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23488.115mil|Location2.X=23788.024mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23488.115mil|Location2.X=23788.024mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED28-Ws2812B (599.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=22897.564mil|Location2.X=23197.473mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=22897.564mil|Location2.X=23197.473mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED27-Ws2812B (584.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=22307.012mil|Location2.X=22606.922mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=22307.012mil|Location2.X=22606.922mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED26-Ws2812B (569.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21716.461mil|Location2.X=22016.371mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21716.461mil|Location2.X=22016.371mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED25-Ws2812B (554.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21224mil|Location2.X=21523.91mil|Location1.Y=2559.055mil|Location2.Y=2918.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21224mil|Location2.X=21523.91mil|Location1.Y=2559.055mil|Location2.Y=2918.981mil|Absolute=True">Component LED24-Ws2812B (541.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20633.784mil|Location2.X=20933.693mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20633.784mil|Location2.X=20933.693mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED23-Ws2812B (526.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20043.233mil|Location2.X=20343.142mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20043.233mil|Location2.X=20343.142mil|Location1.Y=2559.055mil|Location2.Y=2918.52mil|Absolute=True">Component LED22-Ws2812B (511.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19421.197mil|Location2.X=19701.597mil|Location1.Y=2590.612mil|Location2.Y=2887.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19421.197mil|Location2.X=19701.597mil|Location1.Y=2590.612mil|Location2.Y=2887.52mil|Absolute=True">Component LED21-Ws2812B (496.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11480.24mil|Location2.X=11780.15mil|Location1.Y=1299.213mil|Location2.Y=1658.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11480.24mil|Location2.X=11780.15mil|Location1.Y=1299.213mil|Location2.Y=1658.677mil|Absolute=True">Component LED20-Ws2812B (294.1mm,36.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10956.63mil|Location2.X=11247.027mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10956.63mil|Location2.X=11247.027mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True">Component LED19-Ws2812B (281.6mm,36.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10366.079mil|Location2.X=10656.476mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10366.079mil|Location2.X=10656.476mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True">Component LED18-Ws2812B (266.6mm,36.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9775.528mil|Location2.X=10065.925mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9775.528mil|Location2.X=10065.925mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True">Component LED17-Ws2812B (251.6mm,36.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9184.977mil|Location2.X=9475.373mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9184.977mil|Location2.X=9475.373mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True">Component LED16-Ws2812B (236.6mm,36.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8692.851mil|Location2.X=8983.247mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8692.851mil|Location2.X=8983.247mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True">Component LED15-Ws2812B (224.1mm,36.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8102.299mil|Location2.X=8392.696mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8102.299mil|Location2.X=8392.696mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True">Component LED14-Ws2812B (209.1mm,36.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7511.748mil|Location2.X=7802.145mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7511.748mil|Location2.X=7802.145mil|Location1.Y=1330.769mil|Location2.Y=1627.677mil|Absolute=True">Component LED13-Ws2812B (194.1mm,36.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25720.41mil|Location2.X=26010.807mil|Location1.Y=2590.612mil|Location2.Y=2887.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25720.41mil|Location2.X=26010.807mil|Location1.Y=2590.612mil|Location2.Y=2887.52mil|Absolute=True">Component LED12-Ws2812B (656.6mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25228.284mil|Location2.X=25498.687mil|Location1.Y=2590.612mil|Location2.Y=2887.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25228.284mil|Location2.X=25498.687mil|Location1.Y=2590.612mil|Location2.Y=2887.52mil|Absolute=True">Component LED11-Ws2812B (644.1mm,68.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6011.748mil|Location2.X=6302.145mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6011.748mil|Location2.X=6302.145mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED10-Ws2812B (156mm,96mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5657.417mil|Location2.X=5917.386mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5657.417mil|Location2.X=5917.386mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED9-Ws2812B (147mm,96mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5303.087mil|Location2.X=5563.055mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5303.087mil|Location2.X=5563.055mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED8-Ws2812B (138mm,96mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4948.756mil|Location2.X=5208.724mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4948.756mil|Location2.X=5208.724mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED7-Ws2812B (129mm,96mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4594.425mil|Location2.X=4854.394mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4594.425mil|Location2.X=4854.394mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED6-Ws2812B (120mm,96mm) on Top Layer</acronym></a> - Component origin is already ON grid. - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4240.095mil|Location2.X=4500.063mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4240.095mil|Location2.X=4500.063mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED5-Ws2812B (111mm,96mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3885.764mil|Location2.X=4145.732mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3885.764mil|Location2.X=4145.732mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED4-Ws2812B (102mm,96mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3531.433mil|Location2.X=3791.401mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3531.433mil|Location2.X=3791.401mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED3-Ws2812B (93mm,96mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3177.102mil|Location2.X=3437.071mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3177.102mil|Location2.X=3437.071mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED2-Ws2812B (84mm,96mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2704.662mil|Location2.X=2964.63mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2704.662mil|Location2.X=2964.63mil|Location1.Y=3681.1mil|Location2.Y=3978.008mil|Absolute=True">Component LED1-Ws2812B (72mm,96mm) on Top Layer</acronym></a> - Component origin is already ON grid. - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13402.744mil|Location2.X=13600.788mil|Location1.Y=5192.976mil|Location2.Y=5500mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13402.744mil|Location2.X=13600.788mil|Location1.Y=5192.976mil|Location2.Y=5500mil|Absolute=True">Small Component J8-1x2 dupont TXRX (344.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10505.906mil|Location2.X=10648.032mil|Location1.Y=4992.976mil|Location2.Y=5500mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10505.906mil|Location2.X=10648.032mil|Location1.Y=4992.976mil|Location2.Y=5500mil|Absolute=True">SIP Component J7-1x4 dupont power (269.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12758.268mil|Location2.X=12912.205mil|Location1.Y=4592.583mil|Location2.Y=5500mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12758.268mil|Location2.X=12912.205mil|Location1.Y=4592.583mil|Location2.Y=5500mil|Absolute=True">SIP Component J6-1x8 dupont io pins (326.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12320.067mil|Location2.X=12518.11mil|Location1.Y=5192.976mil|Location2.Y=5500mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12320.067mil|Location2.X=12518.11mil|Location1.Y=5192.976mil|Location2.Y=5500mil|Absolute=True">Small Component J5-1x2 dupont I2C (316.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12582.677mil|Location2.X=12714.961mil|Location1.Y=5092.976mil|Location2.Y=5500mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12582.677mil|Location2.X=12714.961mil|Location1.Y=5092.976mil|Location2.Y=5500mil|Absolute=True">Small Component J4-1x3 dupont SPI (321.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10702.756mil|Location2.X=10844.882mil|Location1.Y=4992.976mil|Location2.Y=5500mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10702.756mil|Location2.X=10844.882mil|Location1.Y=4992.976mil|Location2.Y=5500mil|Absolute=True">SIP Component J3-4.2mm 4pin 39300040 (274.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11476.091mil|Location2.X=12315.649mil|Location1.Y=4457.74mil|Location2.Y=5565mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11476.091mil|Location2.X=12315.649mil|Location1.Y=4457.74mil|Location2.Y=5565mil|Absolute=True">Component J2-6pins (299.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18641.689mil|Location2.X=19000mil|Location1.Y=3952.756mil|Location2.Y=4651.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18641.689mil|Location2.X=19000mil|Location1.Y=3952.756mil|Location2.Y=4651.3mil|Absolute=True">SIP Component J1-abs_encoder (480mm,113mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14780.697mil|Location2.X=15000.632mil|Location1.Y=5192.976mil|Location2.Y=5500mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14780.697mil|Location2.X=15000.632mil|Location1.Y=5192.976mil|Location2.Y=5500mil|Absolute=True">Small Component Fan1-5vFanPin (379.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9454.138mil|Location2.X=10441.008mil|Location1.Y=3145.732mil|Location2.Y=5573.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9454.138mil|Location2.X=10441.008mil|Location1.Y=3145.732mil|Location2.Y=5573.15mil|Absolute=True">Component esp1-processor (264.1mm,130.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9236.221mil|Location2.X=9386.419mil|Location1.Y=5311.087mil|Location2.Y=5525mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9236.221mil|Location2.X=9386.419mil|Location1.Y=5311.087mil|Location2.Y=5525mil|Absolute=True">SMT Small Component D11-Led (236.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9039.37mil|Location2.X=9209.562mil|Location1.Y=5311.087mil|Location2.Y=5525mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9039.37mil|Location2.X=9209.562mil|Location1.Y=5311.087mil|Location2.Y=5525mil|Absolute=True">SMT Small Component D10-Led (231.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14088.051mil|Location2.X=14246.595mil|Location1.Y=5304.65mil|Location2.Y=5579mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14088.051mil|Location2.X=14246.595mil|Location1.Y=5304.65mil|Location2.Y=5579mil|Absolute=True">Component D9-SP0503BAHTG (359.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19389.213mil|Location2.X=19516.3mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19389.213mil|Location2.X=19516.3mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True">SMT Small Component D8-LL4148 (494.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19192.363mil|Location2.X=19319.449mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19192.363mil|Location2.X=19319.449mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True">SMT Small Component D7-LL4148 (489.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18995.512mil|Location2.X=19122.599mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18995.512mil|Location2.X=19122.599mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True">SMT Small Component D6-LL4148 (484.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18897.087mil|Location2.X=19024.174mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18897.087mil|Location2.X=19024.174mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True">SMT Small Component D5-LL4148 (481.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18700.237mil|Location2.X=18827.323mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18700.237mil|Location2.X=18827.323mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True">SMT Small Component D4-LL4148 (476.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18503.386mil|Location2.X=18630.473mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18503.386mil|Location2.X=18630.473mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True">SMT Small Component D3-LL4148 (471.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18306.536mil|Location2.X=18433.622mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18306.536mil|Location2.X=18433.622mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True">SMT Small Component D2-LL4148 (466.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18109.685mil|Location2.X=18236.772mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18109.685mil|Location2.X=18236.772mil|Location1.Y=5212.976mil|Location2.Y=5580mil|Absolute=True">SMT Small Component D1-LL4148 (461.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20316.508mil|Location2.X=20557.15mil|Location1.Y=5127.953mil|Location2.Y=5518.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20316.508mil|Location2.X=20557.15mil|Location1.Y=5127.953mil|Location2.Y=5518.575mil|Absolute=True">LCC Component cp1-CP2102N (519.1mm,133.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.882mil|Location2.X=9003.937mil|Location1.Y=5218.567mil|Location2.Y=5574mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.882mil|Location2.X=9003.937mil|Location1.Y=5218.567mil|Location2.Y=5574mil|Absolute=True">Small Component C70-EEU-FM0J331 (224.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8301.181mil|Location2.X=8610.236mil|Location1.Y=5218.567mil|Location2.Y=5574mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8301.181mil|Location2.X=8610.236mil|Location1.Y=5218.567mil|Location2.Y=5574mil|Absolute=True">Small Component C69-EEU-FM0J331 (214.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8005.906mil|Location2.X=8314.961mil|Location1.Y=5218.567mil|Location2.Y=5574mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8005.906mil|Location2.X=8314.961mil|Location1.Y=5218.567mil|Location2.Y=5574mil|Absolute=True">Small Component C68-EEU-FM0J331 (206.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13217.973mil|Location2.X=13398.417mil|Location1.Y=5290.87mil|Location2.Y=5502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13217.973mil|Location2.X=13398.417mil|Location1.Y=5290.87mil|Location2.Y=5502mil|Absolute=True">SMT Small Component C67-capacitor0603 (336.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12922.697mil|Location2.X=13103.141mil|Location1.Y=5290.87mil|Location2.Y=5502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12922.697mil|Location2.X=13103.141mil|Location1.Y=5290.87mil|Location2.Y=5502mil|Absolute=True">SMT Small Component C66-capacitor0603 (329.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13906.949mil|Location2.X=14087.393mil|Location1.Y=5290.87mil|Location2.Y=5502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13906.949mil|Location2.X=14087.393mil|Location1.Y=5290.87mil|Location2.Y=5502mil|Absolute=True">SMT Small Component C65-capacitor0603 (354.1mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13611.673mil|Location2.X=13792.118mil|Location1.Y=5290.87mil|Location2.Y=5502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13611.673mil|Location2.X=13792.118mil|Location1.Y=5290.87mil|Location2.Y=5502mil|Absolute=True">SMT Small Component C64-capacitor0603 (346.6mm,135.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28429.135mil|Location2.X=28609.323mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28429.135mil|Location2.X=28609.323mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C63-capacitor0.1uf (724.1mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27838.583mil|Location2.X=28018.772mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27838.583mil|Location2.X=28018.772mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C62-capacitor0.1uf (709.1mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27248.032mil|Location2.X=27408.227mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27248.032mil|Location2.X=27408.227mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C61-capacitor0.1uf (694.1mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26657.481mil|Location2.X=26837.669mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26657.481mil|Location2.X=26837.669mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C60-capacitor0.1uf (679.1mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26066.93mil|Location2.X=26247.118mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26066.93mil|Location2.X=26247.118mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C59-capacitor0.1uf (664.1mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25476.379mil|Location2.X=25656.567mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25476.379mil|Location2.X=25656.567mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C58-capacitor0.1uf (649.1mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24984.253mil|Location2.X=25164.441mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24984.253mil|Location2.X=25164.441mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C57-capacitor0.1uf (636.6mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24393.701mil|Location2.X=24573.89mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24393.701mil|Location2.X=24573.89mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C56-capacitor0.1uf (621.6mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23803.15mil|Location2.X=23983.339mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23803.15mil|Location2.X=23983.339mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C55-capacitor0.1uf (606.6mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23212.599mil|Location2.X=23392.787mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23212.599mil|Location2.X=23392.787mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C54-capacitor0.1uf (591.6mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12484.252mil|Location2.X=12664.441mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12484.252mil|Location2.X=12664.441mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C53-capacitor0.1uf (319.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11893.701mil|Location2.X=12073.889mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11893.701mil|Location2.X=12073.889mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C52-capacitor0.1uf (304.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11401.575mil|Location2.X=11561.77mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11401.575mil|Location2.X=11561.77mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C51-capacitor0.1uf (291.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10811.024mil|Location2.X=10991.212mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10811.024mil|Location2.X=10991.212mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C50-capacitor0.1uf (276.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10220.473mil|Location2.X=10400.661mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10220.473mil|Location2.X=10400.661mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C49-capacitor0.1uf (261.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9629.921mil|Location2.X=9810.11mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9629.921mil|Location2.X=9810.11mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C48-capacitor0.1uf (246.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9039.37mil|Location2.X=9219.559mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9039.37mil|Location2.X=9219.559mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C47-capacitor0.1uf (231.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8448.819mil|Location2.X=8629.007mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8448.819mil|Location2.X=8629.007mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C46-capacitor0.1uf (216.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7858.268mil|Location2.X=8038.456mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7858.268mil|Location2.X=8038.456mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C45-capacitor0.1uf (201.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29019.686mil|Location2.X=29199.874mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29019.686mil|Location2.X=29199.874mil|Location1.Y=5397.701mil|Location2.Y=5592.426mil|Absolute=True">SMT Small Component C44-capacitor0.1uf (739.1mm,138.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18291.339mil|Location2.X=18471.527mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=18291.339mil|Location2.X=18471.527mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C43-capacitor0.1uf (466.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17700.788mil|Location2.X=17880.976mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17700.788mil|Location2.X=17880.976mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C42-capacitor0.1uf (451.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17110.237mil|Location2.X=17270.431mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17110.237mil|Location2.X=17270.431mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C41-capacitor0.1uf (436.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16519.685mil|Location2.X=16699.874mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16519.685mil|Location2.X=16699.874mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C40-capacitor0.1uf (421.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15929.134mil|Location2.X=16109.323mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15929.134mil|Location2.X=16109.323mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C39-capacitor0.1uf (406.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15338.583mil|Location2.X=15518.771mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15338.583mil|Location2.X=15518.771mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C38-capacitor0.1uf (391.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14748.032mil|Location2.X=14928.22mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14748.032mil|Location2.X=14928.22mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C37-capacitor0.1uf (376.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14255.906mil|Location2.X=14436.094mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14255.906mil|Location2.X=14436.094mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C36-capacitor0.1uf (364.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13665.355mil|Location2.X=13845.543mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13665.355mil|Location2.X=13845.543mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C35-capacitor0.1uf (349.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13074.803mil|Location2.X=13254.992mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13074.803mil|Location2.X=13254.992mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C34-capacitor0.1uf (334.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24393.701mil|Location2.X=24573.89mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24393.701mil|Location2.X=24573.89mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C30-capacitor0.1uf (621.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23803.15mil|Location2.X=23983.339mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23803.15mil|Location2.X=23983.339mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C29-capacitor0.1uf (606.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23311.024mil|Location2.X=23491.213mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=23311.024mil|Location2.X=23491.213mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C28-capacitor0.1uf (594.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=22720.473mil|Location2.X=22900.661mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=22720.473mil|Location2.X=22900.661mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C27-capacitor0.1uf (579.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=22129.922mil|Location2.X=22310.11mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=22129.922mil|Location2.X=22310.11mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C26-capacitor0.1uf (564.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21539.371mil|Location2.X=21719.559mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21539.371mil|Location2.X=21719.559mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C25-capacitor0.1uf (549.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20948.819mil|Location2.X=21129.008mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20948.819mil|Location2.X=21129.008mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C24-capacitor0.1uf (534.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20358.268mil|Location2.X=20538.457mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20358.268mil|Location2.X=20538.457mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C23-capacitor0.1uf (519.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19767.717mil|Location2.X=19947.905mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19767.717mil|Location2.X=19947.905mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C22-capacitor0.1uf (504.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19275.591mil|Location2.X=19435.786mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19275.591mil|Location2.X=19435.786mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C21-capacitor0.1uf (491.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11204.725mil|Location2.X=11384.913mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11204.725mil|Location2.X=11384.913mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True">SMT Small Component C20-capacitor0.1uf (286.6mm,38.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10712.599mil|Location2.X=10882.79mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10712.599mil|Location2.X=10882.79mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True">SMT Small Component C19-capacitor0.1uf (274.1mm,38.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10122.047mil|Location2.X=10292.239mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10122.047mil|Location2.X=10292.239mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True">SMT Small Component C18-capacitor0.1uf (259.1mm,38.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9531.496mil|Location2.X=9701.688mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9531.496mil|Location2.X=9701.688mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True">SMT Small Component C17-capacitor0.1uf (244.1mm,38.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9039.37mil|Location2.X=9209.562mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9039.37mil|Location2.X=9209.562mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True">SMT Small Component C16-capacitor0.1uf (231.6mm,38.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8448.819mil|Location2.X=8619.011mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8448.819mil|Location2.X=8619.011mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True">SMT Small Component C15-capacitor0.1uf (216.6mm,38.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7858.268mil|Location2.X=8028.459mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7858.268mil|Location2.X=8028.459mil|Location1.Y=1480.378mil|Location2.Y=1675.103mil|Absolute=True">SMT Small Component C14-capacitor0.1uf (201.6mm,38.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26066.93mil|Location2.X=26237.121mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26066.93mil|Location2.X=26237.121mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C13-capacitor0.1uf (664.1mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25574.804mil|Location2.X=25744.995mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25574.804mil|Location2.X=25744.995mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C12-capacitor0.1uf (651.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24984.253mil|Location2.X=25141.733mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24984.253mil|Location2.X=25141.733mil|Location1.Y=2740.22mil|Location2.Y=2934.945mil|Absolute=True">SMT Small Component C11-capacitor0.1uf (636.6mm,70.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7779.528mil|Location2.X=7949.72mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7779.528mil|Location2.X=7949.72mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C10-capacitor0.1uf (199.6mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7188.977mil|Location2.X=7346.457mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7188.977mil|Location2.X=7346.457mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C9-capacitor0.1uf (184.6mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6696.851mil|Location2.X=6854.331mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6696.851mil|Location2.X=6854.331mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C8-capacitor0.1uf (172.1mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6204.725mil|Location2.X=6362.205mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6204.725mil|Location2.X=6362.205mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C7-capacitor0.1uf (159.6mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5712.599mil|Location2.X=5870.079mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5712.599mil|Location2.X=5870.079mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C6-capacitor0.1uf (147.1mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5122.047mil|Location2.X=5279.528mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5122.047mil|Location2.X=5279.528mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C5-capacitor0.1uf (132.1mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4629.922mil|Location2.X=4787.402mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4629.922mil|Location2.X=4787.402mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C4-capacitor0.1uf (119.6mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4137.796mil|Location2.X=4295.276mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4137.796mil|Location2.X=4295.276mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C3-capacitor0.1uf (107.1mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3645.669mil|Location2.X=3803.15mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3645.669mil|Location2.X=3803.15mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C2-capacitor0.1uf (94.6mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3055.118mil|Location2.X=3212.599mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3055.118mil|Location2.X=3212.599mil|Location1.Y=4669.354mil|Location2.Y=4864.079mil|Absolute=True">SMT Small Component C1-capacitor0.1uf (79.6mm,119.802mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20967.323mil|Location2.X=21475.197mil|Location1.Y=4425.197mil|Location2.Y=5568.174mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Y:\PCB_LAYOUT\console_mainboard\TestBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20967.323mil|Location2.X=21475.197mil|Location1.Y=4425.197mil|Location2.Y=5568.174mil|Absolute=True">Component ADXL1-ADXL345 (544.1mm,113.302mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
