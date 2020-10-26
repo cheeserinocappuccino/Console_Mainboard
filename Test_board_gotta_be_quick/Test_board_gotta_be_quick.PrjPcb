@@ -106,7 +106,7 @@ GenerateClassCluster=0
 DocumentUniqueId=BBKNDPYM
 
 [Document5]
-DocumentPath=..\Testboard.PcbDoc
+DocumentPath=..\Copy of TestBoard.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -120,9 +120,13 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=JLDWYWXV
+DocumentUniqueId=NTOAAEPT
 
 [GeneratedDocument1]
+DocumentPath=Project Outputs for Test_board_gotta_be_quick\Design Rule Check - Testboard.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
 DocumentPath=Project Outputs for Test_board_gotta_be_quick\Move Component(s) Origin To Grid - TestBoard.html
 DItemRevisionGUID=
 
@@ -245,7 +249,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=FX DocuCentre SC2020 PCL 6_¶Â¥Õ
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
