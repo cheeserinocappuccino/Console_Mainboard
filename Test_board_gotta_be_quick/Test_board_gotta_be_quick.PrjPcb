@@ -123,10 +123,14 @@ GenerateClassCluster=0
 DocumentUniqueId=NTOAAEPT
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for Test_board_gotta_be_quick\Design Rule Check - Testboard.html
+DocumentPath=Project Outputs for Test_board_gotta_be_quick\Design Rule Check - Copy of TestBoard.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
+DocumentPath=Project Outputs for Test_board_gotta_be_quick\Design Rule Check - Testboard.html
+DItemRevisionGUID=
+
+[GeneratedDocument3]
 DocumentPath=Project Outputs for Test_board_gotta_be_quick\Move Component(s) Origin To Grid - TestBoard.html
 DItemRevisionGUID=
 
