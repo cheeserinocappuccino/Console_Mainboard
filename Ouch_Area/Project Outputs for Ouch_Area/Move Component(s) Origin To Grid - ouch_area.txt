@@ -1,0 +1,187 @@
+Move Component(s) Origin to Grid
+Filename     : Y:\PCB_LAYOUT\console_mainboard\ouch_area.PcbDoc
+Date         : 2020/11/14
+Time         : ¤U¤È 10:16:22
+Time Elapsed : 00:00:00
+
+
+    SIP Component usb1-usb_A_horizontal (504mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T15-Touch_pads2x2 (336mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T14-Touch_pads2x2 (304mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T13-Touch_pads2x2 (272mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T12-Touch_pads2x2 (512mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T11-Touch_pads2x2 (488mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T10-Touch_pads2x2 (456mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T9-Touch_pads2x2 (696mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T8-Touch_pads2x2 (664mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T7-Touch_pads2x2 (632mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T6-Touch_pads2x2 (304mm,656mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T5-Touch_pads2x2 (144.78mm,165.1mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T4-Touch_pads2x2 (816mm,888mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T3-Touch_pads2x2 (576mm,656mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T2-Touch_pads2x2 (512mm,656mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component T1-Touch_pads2x2 (544mm,656mm) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component Relay1-Omron_G5v_dc5 (712mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R22-R102 (432mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R21-R102 (432mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R20-R102 (424mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R19-R102 (616mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R18-R102 (608mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R17-R102 (608mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R16-R102 (800mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R15-R102 (792mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R14-R102 (784mm,904mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R13-R102 (480mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R12-R102 (472mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R11-R102 (472mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R10-R102 (736mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R9-R102 (728mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R8-R360 (728mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R7-R360 (728mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R6-R360 (672mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R5-360R (360mm,224mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    SMT Small Component R4-R102 (360mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R3-R4752 (368mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R2-R2212 (400mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R1-R102 (728mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component J2-4.2mm_5v_gnd_3x3 (656mm,440mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SIP Component J1-ouch_and_mainboard_connector (704mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component F4-PTC_0ZCG0260FF2C (488mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component F3-PTC_0ZCG0260FF2C (328mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component F2-PTC_0ZCG0260FF2C (648mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component F1-PTC_0ZCG0260FF2C (352mm,224mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component esp-processor (640mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D65-LL4148 (416mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D64-LL4148 (408mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D63-LL4148 (408mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D62-LL4148 (400mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D61-LL4148 (392mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D60-LL4148 (384mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D59-LL4148 (384mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D58-LL4148 (376mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D57-LL4148 (368mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D56-LL4148 (360mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D55-LL4148 (360mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D54-LL4148 (352mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D53-LL4148 (600mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D52-LL4148 (592mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D51-LL4148 (584mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D50-LL4148 (584mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D49-LL4148 (576mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D48-LL4148 (568mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D47-LL4148 (560mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D46-LL4148 (560mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D45-LL4148 (552mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D44-LL4148 (544mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D43-LL4148 (544mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D42-LL4148 (536mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D41-LL4148 (776mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D40-LL4148 (776mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D39-LL4148 (768mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D38-LL4148 (760mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D37-LL4148 (760mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D36-LL4148 (752mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D35-LL4148 (744mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D34-LL4148 (736mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D33-LL4148 (736mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D32-LL4148 (728mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D31-LL4148 (720mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D30-LL4148 (712mm,896mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D29-LL4148 (384mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D28-LL4148 (376mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D27-LL4148 (376mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D26-LL4148 (368mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D25-LL4148 (360mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D24-LL4148 (352mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D23-LL4148 (352mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D22-LL4148 (344mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D21-LL4148 (336mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D20-LL4148 (328mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D19-LL4148 (328mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D18-LL4148 (320mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D17-LL4148 (648mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D16-LL4148 (640mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D15-LL4148 (640mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D14-LL4148 (632mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D13-LL4148 (608mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D12-LL4148 (600mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D11-LL4148 (600mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D10-LL4148 (592mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D9-RXD (336mm,224mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    SMT Small Component D8-TXD (344mm,224mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    SMT Small Component D7-P_on (720mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D6-ESP (360mm,224mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component D5-SP0503BAHTG (352mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D4-LL4148 (624mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D3-LL4148 (624mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D2-LL4148 (616mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D1-LL4148 (616mm,672mm) on Top Layer - Component pads are OFF grid. No action taken.
+    LCC Component cp1-CP2102N (520mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C8-EEU-FM0J331 (696mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C7-EEU-FM0J331 (688mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C6-EEU-FM0J331 (680mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C5-C4R7 (344mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C4-C104 (336mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C3-C104 (352mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C2-C4R7 (344mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SOIC Component C1-74hc08d (408mm,448mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo25-Ws2812_12ledsOwO (720mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo24-Ws2812_12ledsOwO (712mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo23-Ws2812_12ledsOwO (696mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo22-Ws2812_12ledsOwO (688mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo21-Ws2812_12ledsOwO (680mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo20-Ws2812_12ledsOwO (312mm,240mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo19-Ws2812_12ledsOwO (304mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo18-Ws2812_12ledsOwO (296mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo17-Ws2812_12ledsOwO (288mm,240mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo16-Ws2812_12ledsOwO (392mm,240mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo15-Ws2812_12ledsOwO (20mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo14-Ws2812_12ledsOwO (448mm,0mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo13-Ws2812_12ledsOwO (280mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo12-Ws2812_12ledsOwO (496mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo11-Ws2812_12ledsOwO (488mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo10-Ws2812_12ledsOwO (440mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo9-Ws2812_12ledsOwO (432mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo8-Ws2812_12ledsOwO (424mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo7-Ws2812_12ledsOwO (400mm,40mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo6-Ws2812_12ledsOwO (608mm,240mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component Ayo5-Ws2812_12ledsOwO (568mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo4-Ws2812_12ledsOwO (560mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo3-Ws2812_12ledsOwO (552mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo2-Ws2812_12ledsOwO (544mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component Ayo1-Ws2812_12ledsOwO (8mm,32mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY34-Ws2812_27leds (464mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY33-Ws2812_27leds (456mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY32-Ws2812_27leds (448mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY31-Ws2812_27leds (440mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY30-Ws2812_27leds (424mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY29-Ws2812_27leds (416mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY28-Ws2812_27leds (408mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY27-Ws2812_27leds (400mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY26-Ws2812_27leds (392mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY25-Ws2812_27leds (672mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY24-Ws2812_27leds (664mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY23-Ws2812_27leds (656mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY22-Ws2812_27leds (320mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY21-Ws2812_27leds (264mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY20-Ws2812_27leds (256mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY19-Ws2812_27leds (752mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY18-Ws2812_27leds (744mm,464mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY17-Ws2812_27leds (480mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY16-Ws2812_27leds (472mm,240mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY15-Ws2812_27leds (464mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY14-Ws2812_27leds (456mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY13-Ws2812_27leds (600mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY12-Ws2812_27leds (592mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY11-Ws2812_27leds (584mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY10-Ws2812_27leds (576mm,240mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY9-Ws2812_27leds (328mm,16mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY8-Ws2812_27leds (320mm,16mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY7-Ws2812_27leds (312mm,16mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY6-Ws2812_27leds (304mm,16mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY5-Ws2812_27leds (296mm,16mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY4-Ws2812_27leds (288mm,16mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component AY3-Ws2812_27leds (280mm,16mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY2-Ws2812_27leds (264mm,16mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Component AY1-Ws2812_27leds (256mm,16mm) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+count : 179
