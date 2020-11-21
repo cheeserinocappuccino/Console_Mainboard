@@ -1,267 +1,19 @@
 Protel Design System Design Rule Check
-PCB File : Y:\PCB_LAYOUT\console_mainboard\ouch_area.PcbDoc
-Date     : 2020/11/18
-Time     : ¤W¤È 12:10:14
+PCB File : Z:\Console_LAB\PCB_Layout\console_mainboard\ouch_area.PcbDoc
+Date     : 2020/11/21
+Time     : ¤U¤È 04:58:41
 
-WARNING: Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again
-   Polygon named: Top Layer-+5V
-
-Processing Rule : Clearance Constraint (Gap=15mil) (All),(All)
+Processing Rule : Clearance Constraint (Gap=7.874mil) (All),(All)
 Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net Gate_Data_to_Leds_A Between Pad AY1-4(377.953mil,1309.055mil) on Top Layer And Pad C1-3(15420mil,410mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net Net_Group_C_In Between Pad AY18-4(10456.693mil,1309.055mil) on Top Layer And Pad Jumper3-2(20372.424mil,642.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Net_Group_D_In Between Pad AY26-4(16125.984mil,1309.055mil) on Top Layer And Pad Jumper5-2(20369.421mil,342.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Group_A_DOUT Between Pad AY9-2(2771.654mil,9714.567mil) on Top Layer And Pad J1-3(19900mil,1650mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Net_Group_B_In Between Pad Ayo1-4(3212.599mil,1309.055mil) on Top Layer And Pad Jumper1-2(20390.474mil,970mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Group_B_DOUT Between Pad Ayo15-2(10015.748mil,9714.567mil) on Top Layer And Pad J1-4(19801.575mil,1650mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Group_C_DOUT Between Pad Ayo25-2(15685.039mil,9714.567mil) on Top Layer And Pad J1-5(19703.149mil,1650mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Neopixel_Data_A Between Pad C1-1(15320mil,410mil) on Top Layer And Pad C1-4(15470mil,410mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net Gate_C Between Pad C1-10(15520mil,622.598mil) on Top Layer And Pad esp-9(16885mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Gate_Data_to_Leds_D Between Pad C1-11(15470mil,622.598mil) on Top Layer And Pad Jumper6-1(20710.157mil,342.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Neopixel_Data_A Between Pad C1-12(15420mil,622.598mil) on Top Layer And Pad C1-4(15470mil,410mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net Neopixel_Data_A Between Pad C1-12(15420mil,622.598mil) on Top Layer And Pad C1-9(15570mil,622.598mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net Gate_D Between Pad C1-13(15370mil,622.598mil) on Top Layer And Pad esp-19(17885mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad C1-14(15320mil,622.598mil) on Top Layer And Pad Relay1-1(19123.428mil,907.126mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad C1-14(15320mil,622.598mil) on Top Layer And Pad T13-7(15764.961mil,2281.89mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Gate_A Between Pad C1-2(15370mil,410mil) on Top Layer And Pad esp-33(17285mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Gate_B Between Pad C1-5(15520mil,410mil) on Top Layer And Pad esp-11(17085mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Gate_Data_to_Leds_B Between Pad C1-6(15570mil,410mil) on Top Layer And Pad Jumper2-1(20710.157mil,942.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C1-7(15620mil,410mil) on Top Layer And Track (15688.031mil,1317.323mil)(15688.031mil,1327.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net Gate_Data_to_Leds_C Between Pad C1-8(15620mil,622.598mil) on Top Layer And Pad Jumper4-1(20707.154mil,642.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Neopixel_Data_A Between Pad C1-9(15570mil,622.598mil) on Top Layer And Pad esp-31(17085mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C2-1(21596.574mil,4450mil) on Bottom Layer And Pad C3-1(21786.078mil,4450mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (18592.677mil,4507.323mil) from Top Layer to Bottom Layer And Pad C2-1(21596.574mil,4450mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net USB_5V Between Pad C2-2(21537.519mil,4450mil) on Bottom Layer And Pad C3-2(21727.023mil,4450mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net USB_5V Between Pad usb1-4(19505mil,865.906mil) on Multi-Layer And Pad C2-2(21537.519mil,4450mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C3-1(21786.078mil,4450mil) on Bottom Layer And Pad C4-1(21986.078mil,4450mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net USB_5V Between Pad C3-2(21727.023mil,4450mil) on Bottom Layer And Pad R17-2(22398.136mil,4560mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C4-1(21986.078mil,4450mil) on Bottom Layer And Pad C5-1(22196.574mil,4450mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetC4_2 Between Pad C4-2(21927.023mil,4450mil) on Bottom Layer And Pad C5-2(22137.519mil,4450mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C5-1(22196.574mil,4450mil) on Bottom Layer And Pad D62-1(22528.672mil,4173.386mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetC4_2 Between Pad C5-2(22137.519mil,4450mil) on Bottom Layer And Pad R19-1(23048.331mil,4560mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C6-1(730mil,759.213mil) on Multi-Layer And Pad C7-1(1000mil,759.213mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad J2-1(465mil,758.937mil) on Multi-Layer And Pad C6-1(730mil,759.213mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C6-1(730mil,759.213mil) on Multi-Layer And Pad R16-1(731.614mil,250mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C7-1(1000mil,759.213mil) on Multi-Layer And Pad C8-1(1270mil,759.213mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net RTS_EN Between Pad esp-22(16185mil,995mil) on Multi-Layer And Pad cp1-24(22880.42mil,4257.441mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net TX Between Pad D64-2(20127.835mil,3547.244mil) on Top Layer And Pad cp1-25(22900.105mil,4257.441mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net RX Between Pad D65-2(20327.835mil,3547.244mil) on Top Layer And Pad cp1-26(22919.79mil,4257.441mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net DTR_IO0 Between Pad esp-17(17685mil,95mil) on Multi-Layer And Pad cp1-28(22959.16mil,4257.441mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad cp1-29(22900.546mil,4160.055mil) on Bottom Layer And Pad cp1-3(22997.546mil,4179.685mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad D62-1(22528.672mil,4173.386mil) on Bottom Layer And Pad cp1-29(22900.546mil,4160.055mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad R18-1(22791.615mil,4560mil) on Bottom Layer And Pad cp1-29(22900.546mil,4160.055mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Netcp1_4 Between Pad D62-2(22461.743mil,4173.386mil) on Bottom Layer And Pad cp1-4(22997.546mil,4160mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Netcp1_5 Between Pad D62-3(22536.546mil,4260mil) on Bottom Layer And Pad cp1-5(22997.546mil,4140.315mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetC4_2 Between Pad cp1-6(22997.546mil,4120.63mil) on Bottom Layer And Pad R19-1(23048.331mil,4560mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net USB_5V Between Pad D62-4(22461.743mil,4260mil) on Bottom Layer And Pad cp1-7(22997.546mil,4100.945mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Netcp1_8 Between Pad R18-2(22714.843mil,4560mil) on Bottom Layer And Pad cp1-8(22959.16mil,4062.559mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Netcp1_9 Between Pad cp1-9(22939.475mil,4062.559mil) on Bottom Layer And Pad R19-2(22971.559mil,4560mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_6 Between Pad D21-2(7050mil,8098.819mil) on Bottom Layer And Pad esp-28(16785mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_9 Between Pad D33-2(9880mil,8098.819mil) on Bottom Layer And Pad esp-32(17185mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Netcp1_4 Between Pad usb1-2(19505mil,688.74mil) on Multi-Layer And Pad D62-2(22461.743mil,4173.386mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Netcp1_5 Between Pad usb1-3(19505mil,767.48mil) on Multi-Layer And Pad D62-3(22536.546mil,4260mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net USB_5V Between Pad R17-2(22398.136mil,4560mil) on Bottom Layer And Pad D62-4(22461.743mil,4260mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetD63_1 Between Pad R20-2(19296.614mil,2090mil) on Bottom Layer And Pad D63-1(20011.425mil,2100mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetD63_2 Between Pad esp-4(16385mil,95mil) on Multi-Layer And Pad D63-2(19952.37mil,2100mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetD64_1 Between Pad R22-2(19836.693mil,3547.244mil) on Top Layer And Pad D64-1(20068.78mil,3547.244mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net TX Between Pad J1-1(20096.85mil,1650mil) on Multi-Layer And Pad D64-2(20127.835mil,3547.244mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net NetD65_1 Between Pad R21-2(19536.693mil,3547.244mil) on Top Layer And Pad D65-1(20268.78mil,3547.244mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net RX Between Pad J1-2(19998.425mil,1650mil) on Multi-Layer And Pad D65-2(20327.835mil,3547.244mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_3 Between Pad D9-2(4220mil,8098.819mil) on Bottom Layer And Pad esp-25(16485mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Netesp_1 Between Pad esp-1(16085mil,95mil) on Multi-Layer And Pad esp-7(16685mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_15 Between Track (15580mil,8098.819mil)(15594.764mil,8098.819mil) on Bottom Layer And Pad esp-12(17185mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_14 Between Track (15580mil,5263.819mil)(15594.764mil,5263.819mil) on Bottom Layer And Pad esp-15(17485mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_13 Between Track (15580mil,2428.819mil)(15594.764mil,2428.819mil) on Bottom Layer And Pad esp-16(17585mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Netesp_1 Between Pad esp-36(17585mil,995mil) on Multi-Layer And Pad esp-18(17785mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Netesp_1 Between Pad esp-8(16785mil,95mil) on Multi-Layer And Pad esp-18(17785mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net TX Between Pad esp-2(16185mil,95mil) on Multi-Layer And Pad J1-1(20096.85mil,1650mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_1 Between Track (3355mil,5264.173mil)(4220mil,5264.173mil) on Bottom Layer And Pad esp-23(16285mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_2 Between Track (3355mil,2429.528mil)(4220mil,2429.528mil) on Bottom Layer And Pad esp-24(16385mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_4 Between Track (6185mil,2429.528mil)(7050mil,2429.528mil) on Bottom Layer And Pad esp-26(16585mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_5 Between Track (6185mil,5264.173mil)(7050mil,5264.173mil) on Bottom Layer And Pad esp-27(16685mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_7 Between Track (9015mil,2429.528mil)(9880mil,2429.528mil) on Bottom Layer And Pad esp-29(16885mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net RX Between Pad esp-3(16285mil,95mil) on Multi-Layer And Pad J1-2(19998.425mil,1650mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_8 Between Track (9015mil,5264.173mil)(9880mil,5264.173mil) on Bottom Layer And Pad esp-30(16985mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_10 Between Track (11881.181mil,2429.528mil)(12735mil,2429.528mil) on Bottom Layer And Pad esp-34(17385mil,995mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Esp32_Power Between Pad esp-35(17485mil,995mil) on Multi-Layer And Pad Relay1-3(19123.428mil,607.126mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Netesp_1 Between Pad esp-36(17585mil,995mil) on Multi-Layer And Pad R21-1(19459.921mil,3547.244mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_12 Between Track (11881.181mil,8098.819mil)(12735mil,8098.819mil) on Bottom Layer And Pad esp-5(16485mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Touch_11 Between Track (11881.181mil,5264.173mil)(12735mil,5264.173mil) on Bottom Layer And Pad esp-6(16585mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Netesp_1 Between Pad esp-7(16685mil,95mil) on Multi-Layer And Pad esp-8(16785mil,95mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Group_A_DOUT Between Pad J1-3(19900mil,1650mil) on Multi-Layer And Pad Jumper1-1(20467.246mil,970mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Group_B_DOUT Between Pad J1-4(19801.575mil,1650mil) on Multi-Layer And Pad Jumper3-1(20449.196mil,642.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Group_C_DOUT Between Pad J1-5(19703.149mil,1650mil) on Multi-Layer And Pad Jumper5-1(20446.193mil,342.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Group_D_DOUT Between Track (18519.685mil,9705.413mil)(18519.685mil,9714.567mil) on Top Layer And Pad J1-6(19604.724mil,1650mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad J2-2(299.646mil,758.937mil) on Multi-Layer And Pad J2-1(465mil,758.937mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad J2-3(134.291mil,758.937mil) on Multi-Layer And Pad J2-2(299.646mil,758.937mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Track (254.961mil,1317.323mil)(254.961mil,1327.323mil) on Top Layer And Pad J2-2(299.646mil,758.937mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net Net_Group_B_In Between Pad Jumper1-2(20390.474mil,970mil) on Bottom Layer And Pad Jumper2-2(20633.385mil,942.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Net_Group_C_In Between Pad Jumper3-2(20372.424mil,642.937mil) on Bottom Layer And Pad Jumper4-2(20630.382mil,642.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Net_Group_D_In Between Pad Jumper5-2(20369.421mil,342.937mil) on Bottom Layer And Pad Jumper6-2(20633.385mil,342.937mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Netcp1_8 Between Pad R17-1(22474.907mil,4560mil) on Bottom Layer And Pad R18-2(22714.843mil,4560mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (18592.677mil,1987.323mil) from Top Layer to Bottom Layer And Pad R20-1(19373.386mil,2090mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net Netesp_1 Between Pad R21-1(19459.921mil,3547.244mil) on Top Layer And Pad R22-1(19759.921mil,3547.244mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad Relay1-2(19323.428mil,907.126mil) on Multi-Layer And Pad usb1-1(19505mil,590.315mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (18592.677mil,1357.323mil) from Top Layer to Bottom Layer And Pad Relay1-2(19323.428mil,907.126mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T10-7(12930.315mil,2281.89mil) on Multi-Layer And Pad T10-10(12930.315mil,2872.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T10-11(12930.315mil,2972.441mil) on Multi-Layer And Track (13108.346mil,2902.323mil)(13168.346mil,2902.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11348.583mil,2937.323mil) from Top Layer to Bottom Layer And Pad T10-2(11636.614mil,2972.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11348.583mil,2307.323mil) from Top Layer to Bottom Layer And Pad T10-5(11636.614mil,2381.89mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T10-8(12930.315mil,2381.89mil) on Multi-Layer And Track (13113.346mil,2272.323mil)(13173.346mil,2272.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T1-7(4426.378mil,2281.89mil) on Multi-Layer And Pad T1-10(4426.378mil,2872.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Track (3770mil,3195.709mil)(4420mil,3195.709mil) on Bottom Layer And Pad T1-10(4426.378mil,2872.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T8-10(10095.669mil,5707.087mil) on Multi-Layer And Pad T11-1(11636.614mil,5907.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T1-11(4426.378mil,2972.441mil) on Multi-Layer And Track (4604.409mil,2902.323mil)(4664.409mil,2902.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T11-7(12930.315mil,5116.535mil) on Multi-Layer And Pad T11-10(12930.315mil,5707.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T11-10(12930.315mil,5707.087mil) on Multi-Layer And Pad T14-7(14471.26mil,5907.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T11-11(12930.315mil,5807.087mil) on Multi-Layer And Track (13108.346mil,5737.323mil)(13168.346mil,5737.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Track (11318.583mil,5767.323mil)(11358.583mil,5767.323mil) on Top Layer And Pad T11-2(11636.614mil,5807.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11348.583mil,5137.323mil) from Top Layer to Bottom Layer And Pad T11-5(11636.614mil,5216.535mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T11-8(12930.315mil,5216.535mil) on Multi-Layer And Track (13113.346mil,5107.323mil)(13173.346mil,5107.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (2844.646mil,2937.323mil) from Top Layer to Bottom Layer And Pad T1-2(3132.677mil,2972.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T12-7(12930.315mil,7951.181mil) on Multi-Layer And Pad T12-10(12930.315mil,8541.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T12-11(12930.315mil,8641.732mil) on Multi-Layer And Track (13103.346mil,8572.323mil)(13163.346mil,8572.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11348.583mil,8607.323mil) from Top Layer to Bottom Layer And Pad T12-2(11636.614mil,8641.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T9-7(10095.669mil,7951.181mil) on Multi-Layer And Pad T12-4(11636.614mil,8151.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11348.583mil,7977.323mil) from Top Layer to Bottom Layer And Pad T12-5(11636.614mil,8051.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T12-7(12930.315mil,7951.181mil) on Multi-Layer And Pad T15-4(14471.26mil,8151.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T12-8(12930.315mil,8051.181mil) on Multi-Layer And Track (13108.346mil,7942.323mil)(13168.346mil,7942.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Track (12930.315mil,2872.441mil)(13013.937mil,2956.063mil) on Bottom Layer And Pad T13-1(14471.26mil,3072.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T13-7(15764.961mil,2281.89mil) on Multi-Layer And Pad T13-10(15764.961mil,2872.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T13-11(15764.961mil,2972.441mil) on Multi-Layer And Track (15942.992mil,2902.323mil)(16002.992mil,2902.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (14183.228mil,2937.323mil) from Top Layer to Bottom Layer And Pad T13-2(14471.26mil,2972.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (14183.228mil,2307.323mil) from Top Layer to Bottom Layer And Pad T13-5(14471.26mil,2381.89mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T13-8(15764.961mil,2381.89mil) on Multi-Layer And Track (15947.992mil,2272.323mil)(16007.992mil,2272.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T14-1(15764.961mil,5116.535mil) on Multi-Layer And Pad T14-4(15764.961mil,5707.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (14183.228mil,5137.323mil) from Top Layer to Bottom Layer And Pad T14-11(14471.26mil,5216.535mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T14-2(15764.961mil,5216.535mil) on Multi-Layer And Track (15947.992mil,5107.323mil)(16007.992mil,5107.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T14-5(15764.961mil,5807.087mil) on Multi-Layer And Track (15942.992mil,5737.323mil)(16002.992mil,5737.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Track (14153.228mil,5767.323mil)(14193.228mil,5767.323mil) on Top Layer And Pad T14-8(14471.26mil,5807.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (2844.646mil,2307.323mil) from Top Layer to Bottom Layer And Pad T1-5(3132.677mil,2381.89mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T15-7(15764.961mil,7951.181mil) on Multi-Layer And Pad T15-10(15764.961mil,8541.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T15-11(15764.961mil,8641.732mil) on Multi-Layer And Track (15937.992mil,8572.323mil)(15997.992mil,8572.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (14183.228mil,8607.323mil) from Top Layer to Bottom Layer And Pad T15-2(14471.26mil,8641.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (14183.228mil,7977.323mil) from Top Layer to Bottom Layer And Pad T15-5(14471.26mil,8051.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T15-8(15764.961mil,8051.181mil) on Multi-Layer And Track (15942.992mil,7942.323mil)(16002.992mil,7942.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T1-8(4426.378mil,2381.89mil) on Multi-Layer And Track (4609.409mil,2272.323mil)(4669.409mil,2272.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T2-7(4426.378mil,5116.535mil) on Multi-Layer And Pad T2-10(4426.378mil,5707.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Track (3770mil,6030.354mil)(4420mil,6030.354mil) on Bottom Layer And Pad T2-10(4426.378mil,5707.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T2-11(4426.378mil,5807.087mil) on Multi-Layer And Track (4604.409mil,5737.323mil)(4664.409mil,5737.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Track (2814.646mil,5767.323mil)(2854.646mil,5767.323mil) on Top Layer And Pad T2-2(3132.677mil,5807.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (2844.646mil,5137.323mil) from Top Layer to Bottom Layer And Pad T2-5(3132.677mil,5216.535mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Track (3770mil,3195.709mil)(4420mil,3195.709mil) on Bottom Layer And Pad T2-7(4426.378mil,5116.535mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T2-8(4426.378mil,5216.535mil) on Multi-Layer And Track (4609.409mil,5107.323mil)(4669.409mil,5107.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T3-11(4426.378mil,8641.732mil) on Multi-Layer And Track (4599.409mil,8572.323mil)(4659.409mil,8572.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (2844.646mil,8607.323mil) from Top Layer to Bottom Layer And Pad T3-2(3132.677mil,8641.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (2844.646mil,7977.323mil) from Top Layer to Bottom Layer And Pad T3-5(3132.677mil,8051.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T3-7(4426.378mil,7951.181mil) on Multi-Layer And Pad T6-4(5967.323mil,8151.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Track (3770mil,6030.354mil)(4420mil,6030.354mil) on Bottom Layer And Pad T3-7(4426.378mil,7951.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T3-8(4426.378mil,8051.181mil) on Multi-Layer And Track (4604.409mil,7942.323mil)(4664.409mil,7942.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Track (3770mil,3195.709mil)(4420mil,3195.709mil) on Bottom Layer And Pad T4-1(5967.323mil,3072.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T4-7(7261.024mil,2281.89mil) on Multi-Layer And Pad T4-10(7261.024mil,2872.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T4-10(7261.024mil,2872.441mil) on Multi-Layer And Pad T7-1(8801.969mil,3072.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T4-11(7261.024mil,2972.441mil) on Multi-Layer And Track (7439.055mil,2902.323mil)(7499.055mil,2902.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5679.291mil,2937.323mil) from Top Layer to Bottom Layer And Pad T4-2(5967.323mil,2972.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5679.291mil,2307.323mil) from Top Layer to Bottom Layer And Pad T4-5(5967.323mil,2381.89mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T4-8(7261.024mil,2381.89mil) on Multi-Layer And Track (7444.055mil,2272.323mil)(7504.055mil,2272.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Track (3770mil,6030.354mil)(4420mil,6030.354mil) on Bottom Layer And Pad T5-1(5967.323mil,5907.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T5-7(7261.024mil,5116.535mil) on Multi-Layer And Pad T5-10(7261.024mil,5707.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T5-10(7261.024mil,5707.087mil) on Multi-Layer And Pad T8-1(8801.969mil,5907.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T5-11(7261.024mil,5807.087mil) on Multi-Layer And Track (7439.055mil,5737.323mil)(7499.055mil,5737.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Track (5649.291mil,5767.323mil)(5689.291mil,5767.323mil) on Top Layer And Pad T5-2(5967.323mil,5807.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5679.291mil,5137.323mil) from Top Layer to Bottom Layer And Pad T5-5(5967.323mil,5216.535mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T5-8(7261.024mil,5216.535mil) on Multi-Layer And Track (7444.055mil,5107.323mil)(7504.055mil,5107.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T6-7(7261.024mil,7951.181mil) on Multi-Layer And Pad T6-10(7261.024mil,8541.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T6-11(7261.024mil,8641.732mil) on Multi-Layer And Track (7434.055mil,8572.323mil)(7494.055mil,8572.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5679.291mil,8607.323mil) from Top Layer to Bottom Layer And Pad T6-2(5967.323mil,8641.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5679.291mil,7977.323mil) from Top Layer to Bottom Layer And Pad T6-5(5967.323mil,8051.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T6-7(7261.024mil,7951.181mil) on Multi-Layer And Pad T9-4(8801.969mil,8151.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T6-8(7261.024mil,8051.181mil) on Multi-Layer And Track (7439.055mil,7942.323mil)(7499.055mil,7942.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T7-7(10095.669mil,2281.89mil) on Multi-Layer And Pad T7-10(10095.669mil,2872.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T7-10(10095.669mil,2872.441mil) on Multi-Layer And Track (11636.614mil,3072.441mil)(11759.882mil,3195.709mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T7-11(10095.669mil,2972.441mil) on Multi-Layer And Track (10273.701mil,2902.323mil)(10333.701mil,2902.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (8513.937mil,2937.323mil) from Top Layer to Bottom Layer And Pad T7-2(8801.969mil,2972.441mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (8513.937mil,2307.323mil) from Top Layer to Bottom Layer And Pad T7-5(8801.969mil,2381.89mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T7-7(10095.669mil,2281.89mil) on Multi-Layer And Track (10410mil,870mil)(10412.874mil,867.126mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T7-8(10095.669mil,2381.89mil) on Multi-Layer And Track (10278.701mil,2272.323mil)(10338.701mil,2272.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T8-7(10095.669mil,5116.535mil) on Multi-Layer And Pad T8-10(10095.669mil,5707.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T8-11(10095.669mil,5807.087mil) on Multi-Layer And Track (10273.701mil,5737.323mil)(10333.701mil,5737.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Track (8483.937mil,5767.323mil)(8523.937mil,5767.323mil) on Top Layer And Pad T8-2(8801.969mil,5807.087mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (8513.937mil,5137.323mil) from Top Layer to Bottom Layer And Pad T8-5(8801.969mil,5216.535mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T8-8(10095.669mil,5216.535mil) on Multi-Layer And Track (10278.701mil,5107.323mil)(10338.701mil,5107.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5V Between Pad T9-7(10095.669mil,7951.181mil) on Multi-Layer And Pad T9-10(10095.669mil,8541.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T9-11(10095.669mil,8641.732mil) on Multi-Layer And Track (10268.701mil,8572.323mil)(10328.701mil,8572.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (8513.937mil,8607.323mil) from Top Layer to Bottom Layer And Pad T9-2(8801.969mil,8641.732mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (8513.937mil,7977.323mil) from Top Layer to Bottom Layer And Pad T9-5(8801.969mil,8051.181mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad T9-8(10095.669mil,8051.181mil) on Multi-Layer And Track (10273.701mil,7942.323mil)(10333.701mil,7942.323mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (9773.78mil,4517.323mil) from Top Layer to Bottom Layer And Via (10088.74mil,4517.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (10088.74mil,9557.323mil) from Top Layer to Bottom Layer And Via (10403.701mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (10403.701mil,9557.323mil) from Top Layer to Bottom Layer And Via (10718.661mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (10718.661mil,9557.323mil) from Top Layer to Bottom Layer And Via (11033.622mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11033.622mil,9557.323mil) from Top Layer to Bottom Layer And Via (11348.583mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11348.583mil,9557.323mil) from Top Layer to Bottom Layer And Via (11663.543mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11663.543mil,1677.323mil) from Top Layer to Bottom Layer And Via (11978.504mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (11978.504mil,1677.323mil) from Top Layer to Bottom Layer And Via (12293.465mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (12293.465mil,1677.323mil) from Top Layer to Bottom Layer And Via (12608.425mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (12608.425mil,4517.323mil) from Top Layer to Bottom Layer And Via (12923.386mil,4517.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (1269.842mil,9557.323mil) from Top Layer to Bottom Layer And Via (1584.803mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (954.882mil,9557.323mil) from Top Layer to Bottom Layer And Via (1269.842mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (12923.386mil,9557.323mil) from Top Layer to Bottom Layer And Via (13238.346mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (13238.346mil,9557.323mil) from Top Layer to Bottom Layer And Via (13553.307mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (13553.307mil,9557.323mil) from Top Layer to Bottom Layer And Via (13868.268mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (13868.268mil,9557.323mil) from Top Layer to Bottom Layer And Via (14183.228mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (14183.228mil,9557.323mil) from Top Layer to Bottom Layer And Via (14498.031mil,9557.48mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (14498.031mil,1677.48mil) from Top Layer to Bottom Layer And Via (14813.15mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (14813.15mil,1677.323mil) from Top Layer to Bottom Layer And Via (15128.11mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (15128.11mil,1677.323mil) from Top Layer to Bottom Layer And Via (15443.071mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (15443.071mil,4517.323mil) from Top Layer to Bottom Layer And Via (15758.031mil,4517.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (15758.031mil,9557.323mil) from Top Layer to Bottom Layer And Via (16072.992mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (1584.803mil,9557.323mil) from Top Layer to Bottom Layer And Via (1899.764mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (16072.992mil,9557.323mil) from Top Layer to Bottom Layer And Via (16387.953mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (16387.953mil,9557.323mil) from Top Layer to Bottom Layer And Via (16702.913mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (16702.913mil,9557.323mil) from Top Layer to Bottom Layer And Via (17017.874mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (17017.874mil,9557.323mil) from Top Layer to Bottom Layer And Via (17332.835mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (17332.835mil,9557.323mil) from Top Layer to Bottom Layer And Via (17647.795mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (17647.795mil,9557.323mil) from Top Layer to Bottom Layer And Via (17962.756mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (17962.756mil,9557.323mil) from Top Layer to Bottom Layer And Via (18277.716mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (18277.716mil,9557.323mil) from Top Layer to Bottom Layer And Via (18592.677mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (1899.764mil,9557.323mil) from Top Layer to Bottom Layer And Via (2214.724mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (2214.724mil,9557.323mil) from Top Layer to Bottom Layer And Via (2529.685mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (2529.685mil,9557.323mil) from Top Layer to Bottom Layer And Via (2844.646mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (2844.646mil,9557.323mil) from Top Layer to Bottom Layer And Via (3159.606mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (3159.606mil,1677.323mil) from Top Layer to Bottom Layer And Via (3474.567mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (324.961mil,9557.323mil) from Top Layer to Bottom Layer And Via (639.921mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (3474.567mil,1677.323mil) from Top Layer to Bottom Layer And Via (3789.528mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (3789.528mil,1677.323mil) from Top Layer to Bottom Layer And Via (4104.488mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (4104.488mil,4517.323mil) from Top Layer to Bottom Layer And Via (4419.449mil,4517.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (4419.449mil,9557.323mil) from Top Layer to Bottom Layer And Via (4734.409mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (4734.409mil,9557.323mil) from Top Layer to Bottom Layer And Via (5049.37mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5049.37mil,9557.323mil) from Top Layer to Bottom Layer And Via (5364.331mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5364.331mil,9557.323mil) from Top Layer to Bottom Layer And Via (5679.291mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5679.291mil,9557.323mil) from Top Layer to Bottom Layer And Via (5994.252mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (5994.252mil,1677.323mil) from Top Layer to Bottom Layer And Via (6309.213mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (6309.213mil,1677.323mil) from Top Layer to Bottom Layer And Via (6624.173mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (639.921mil,9557.323mil) from Top Layer to Bottom Layer And Via (954.882mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (6624.173mil,1677.323mil) from Top Layer to Bottom Layer And Via (6939.134mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (6939.134mil,4517.323mil) from Top Layer to Bottom Layer And Via (7254.095mil,4517.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (7254.095mil,9557.323mil) from Top Layer to Bottom Layer And Via (7569.055mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (7569.055mil,9557.323mil) from Top Layer to Bottom Layer And Via (7884.016mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (7884.016mil,9557.323mil) from Top Layer to Bottom Layer And Via (8198.976mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (8198.976mil,9557.323mil) from Top Layer to Bottom Layer And Via (8513.937mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (8513.937mil,9557.323mil) from Top Layer to Bottom Layer And Via (8828.898mil,9557.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (8828.898mil,1677.323mil) from Top Layer to Bottom Layer And Via (9143.858mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (9143.858mil,1677.323mil) from Top Layer to Bottom Layer And Via (9458.819mil,1677.323mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (9458.819mil,1677.323mil) from Top Layer to Bottom Layer And Via (9773.78mil,1677.323mil) from Top Layer to Bottom Layer 
-Rule Violations :244
+Rule Violations :0
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
-   Violation between Modified Polygon: Polygon Not Repour After Edit  (Top Layer-+5V) on Top Layer 
-Rule Violations :1
+Rule Violations :0
 
 Processing Rule : Width Constraint (Min=5mil) (Max=200mil) (Preferred=10mil) (All)
 Rule Violations :0
@@ -269,7 +21,7 @@ Rule Violations :0
 Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Hole Size Constraint (Min=1mil) (Max=196.85mil) (All)
+Processing Rule : Hole Size Constraint (Min=11.811mil) (Max=196.85mil) (All)
 Rule Violations :0
 
 Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
@@ -279,26 +31,18 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0mil) (All),(All)
 Rule Violations :0
 
 Processing Rule : Silk To Solder Mask (Clearance=5mil) (IsPad),(All)
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5mil) Between Pad Relay1-3(19323.428mil,607.126mil) on Multi-Layer And Text "GND" (19275mil,600.315mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]
-Rule Violations :1
+Rule Violations :0
 
 Processing Rule : Silk to Silk (Clearance=5mil) (All),(All)
-   Violation between Silk To Silk Clearance Constraint: (2.817mil < 5mil) Between Text "+" (19375mil,700.315mil) on Bottom Overlay And Track (19367.129mil,667.126mil)(19367.129mil,847.126mil) on Bottom Overlay Silk Text to Silk Clearance [2.817mil]
-   Violation between Silk To Silk Clearance Constraint: (2.857mil < 5mil) Between Text "o" (23030.105mil,4250mil) on Bottom Overlay And Track (22980.105mil,4260mil)(23000.105mil,4260mil) on Bottom Overlay Silk Text to Silk Clearance [2.857mil]
-   Violation between Silk To Silk Clearance Constraint: (2.857mil < 5mil) Between Text "o" (23030.105mil,4250mil) on Bottom Overlay And Track (23000.105mil,4240mil)(23000.105mil,4260mil) on Bottom Overlay Silk Text to Silk Clearance [2.857mil]
-   Violation between Silk To Silk Clearance Constraint: (Collision < 5mil) Between Text "Relay1" (19395mil,1103.937mil) on Bottom Overlay And Text "usb1" (19485mil,1084.74mil) on Bottom Overlay Silk Text to Silk Clearance [0mil]
-Rule Violations :4
+Rule Violations :0
 
 Processing Rule : Net Antennae (Tolerance=0mil) (All)
-   Violation between Net Antennae: Track (10410mil,870mil)(10412.874mil,867.126mil) on Top Layer 
-   Violation between Net Antennae: Track (3770mil,3195.709mil)(4420mil,3195.709mil) on Bottom Layer 
-   Violation between Net Antennae: Track (3770mil,6030.354mil)(4420mil,6030.354mil) on Bottom Layer 
-Rule Violations :3
+Rule Violations :0
 
 Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
 Rule Violations :0
 
 
-Violations Detected : 253
+Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:06
+Time Elapsed        : 00:00:17
