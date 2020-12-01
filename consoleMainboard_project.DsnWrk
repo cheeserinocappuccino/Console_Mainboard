@@ -6,3 +6,5 @@ ProjectPath=console_mainboard.PrjPcb
 ProjectPath=Test_board_gotta_be_quick\Test_board_gotta_be_quick.PrjPcb
 [Project3]
 ProjectPath=Ouch_Area\Ouch_Area.PrjPcb
+[Project4]
+ProjectPath=The_real_mainboar\The_real_mainboar.PrjPcb
