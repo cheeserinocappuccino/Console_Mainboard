@@ -1,0 +1,104 @@
+Protel Design System Design Rule Check
+PCB File : Y:\PCB_LAYOUT\console_mainboard\InnerRing\PCB_innerRing.PcbDoc
+Date     : 2020/12/6
+Time     : ¤U¤È 10:36:41
+
+Processing Rule : Clearance Constraint (Gap=0.381mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C9-1(-71.75mm,54.675mm) on Top Layer And Pad C10-1(-66.475mm,54.675mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C10-1(-66.475mm,54.675mm) on Top Layer And Pad LED3-3(-37.849mm,51.525mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad C9-2(-69.8mm,54.675mm) on Top Layer And Pad C10-2(-64.525mm,54.675mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad C10-2(-64.525mm,54.675mm) on Top Layer And Pad LED3-1(-43.349mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED2-1(18.514mm,-22.911mm) on Top Layer And Pad J1-1(20.895mm,-33.623mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net Led_din Between Pad LED1-4(-18.84mm,-17.45mm) on Top Layer And Pad J1-2(25.138mm,-29.381mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED2-3(24.666mm,-21.285mm) on Top Layer And Pad J1-3(29.381mm,-25.138mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad J1-3(29.381mm,-25.138mm) on Top Layer And Pad R1-1(36.141mm,-13.389mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad J1-4(33.623mm,-20.895mm) on Top Layer And Pad R1-2(37.519mm,-12.011mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED9-1(9.279mm,54.725mm) on Top Layer And Pad LED10-1(18.054mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED9-3(14.779mm,51.525mm) on Top Layer And Pad LED10-3(23.554mm,51.525mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED9_2 Between Pad LED9-2(9.279mm,51.525mm) on Top Layer And Pad LED10-4(23.554mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S3-4(-27.75mm,-3.25mm) on Multi-Layer And Pad LED1-1(-24.34mm,-17.45mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED1_2 Between Pad LED1-2(-24.34mm,-20.65mm) on Top Layer And Pad LED2-4(22.403mm,-19.022mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED1-3(-18.84mm,-20.65mm) on Top Layer And Pad LED2-3(24.666mm,-21.285mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED5-3(-20.298mm,51.525mm) on Top Layer And Pad LED1-3(-18.84mm,-20.65mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S4-4(3.25mm,-27.75mm) on Multi-Layer And Pad LED2-1(18.514mm,-22.911mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED2-1(18.514mm,-22.911mm) on Top Layer And Pad S5-1(27.75mm,-3.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED2_2 Between Pad LED3-4(-37.849mm,54.725mm) on Top Layer And Pad LED2-2(20.777mm,-25.174mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED3-1(-43.349mm,54.725mm) on Top Layer And Pad LED4-1(-34.573mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED3_2 Between Pad LED3-2(-43.349mm,51.525mm) on Top Layer And Pad LED4-4(-29.073mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED3-3(-37.849mm,51.525mm) on Top Layer And Pad LED4-3(-29.073mm,51.525mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED4-1(-34.573mm,54.725mm) on Top Layer And Pad LED5-1(-25.798mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED4_2 Between Pad LED4-2(-34.573mm,51.525mm) on Top Layer And Pad LED5-4(-20.298mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED4-3(-29.073mm,51.525mm) on Top Layer And Pad LED5-3(-20.298mm,51.525mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED5-1(-25.798mm,54.725mm) on Top Layer And Pad LED6-1(-17.047mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED5_2 Between Pad LED5-2(-25.798mm,51.525mm) on Top Layer And Pad LED6-4(-11.547mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED5-3(-20.298mm,51.525mm) on Top Layer And Pad LED6-3(-11.547mm,51.525mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED6-1(-17.047mm,54.725mm) on Top Layer And Pad LED7-1(-8.272mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED6_2 Between Pad LED6-2(-17.047mm,51.525mm) on Top Layer And Pad LED7-4(-2.772mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED6-3(-11.547mm,51.525mm) on Top Layer And Pad LED7-3(-2.772mm,51.525mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED7-1(-8.272mm,54.725mm) on Top Layer And Pad LED8-1(0.504mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED7_2 Between Pad LED7-2(-8.272mm,51.525mm) on Top Layer And Pad LED8-4(6.004mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED7-3(-2.772mm,51.525mm) on Top Layer And Pad LED8-3(6.004mm,51.525mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED8-1(0.504mm,54.725mm) on Top Layer And Pad LED9-1(9.279mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad LED8-1(0.504mm,54.725mm) on Top Layer And Pad S2-1(3.25mm,27.75mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetLED8_2 Between Pad LED8-2(0.504mm,51.525mm) on Top Layer And Pad LED9-4(14.779mm,54.725mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LED8-3(6.004mm,51.525mm) on Top Layer And Pad LED9-3(14.779mm,51.525mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S5-2(32.25mm,-3.25mm) on Multi-Layer And Pad R1-2(37.519mm,-12.011mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S1-1(-3.25mm,2.25mm) on Multi-Layer And Pad S1-4(3.25mm,2.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S3-1(-27.75mm,3.25mm) on Multi-Layer And Pad S1-1(-3.25mm,2.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S1-2(-3.25mm,-2.25mm) on Multi-Layer And Pad S1-3(3.25mm,-2.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S2-3(-3.25mm,32.25mm) on Multi-Layer And Pad S1-2(-3.25mm,-2.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S3-3(-32.25mm,-3.25mm) on Multi-Layer And Pad S1-2(-3.25mm,-2.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S4-2(-3.25mm,-32.25mm) on Multi-Layer And Pad S1-2(-3.25mm,-2.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S1-3(3.25mm,-2.25mm) on Multi-Layer And Pad S5-2(32.25mm,-3.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S2-1(3.25mm,27.75mm) on Multi-Layer And Pad S1-4(3.25mm,2.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S1-4(3.25mm,2.25mm) on Multi-Layer And Pad S5-4(27.75mm,3.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S2-4(-3.25mm,27.75mm) on Multi-Layer And Pad S2-1(3.25mm,27.75mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S2-3(-3.25mm,32.25mm) on Multi-Layer And Pad S2-2(3.25mm,32.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S3-4(-27.75mm,-3.25mm) on Multi-Layer And Pad S3-1(-27.75mm,3.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S3-3(-32.25mm,-3.25mm) on Multi-Layer And Pad S3-2(-32.25mm,3.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S4-1(-3.25mm,-27.75mm) on Multi-Layer And Pad S4-4(3.25mm,-27.75mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S4-2(-3.25mm,-32.25mm) on Multi-Layer And Pad S4-3(3.25mm,-32.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad S5-1(27.75mm,-3.25mm) on Multi-Layer And Pad S5-4(27.75mm,3.25mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net Button_data Between Pad S5-2(32.25mm,-3.25mm) on Multi-Layer And Pad S5-3(32.25mm,3.25mm) on Multi-Layer 
+Rule Violations :56
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.127mm) (Max=2.54mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.127mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 56
+Waived Violations : 0
+Time Elapsed        : 00:00:01
